@@ -1,0 +1,21 @@
+.clickChangeBtn {
+    transition: transform 400ms ease-in-out, box-shadow 400ms ease-out;
+}
+
+.clickChangeBtn:hover {
+    transform: scale(1.002);
+    box-shadow: 16px 16px 32px #e6e6e6, -16px -16px 32px #ffffff;
+}
+
+.newAccountBtn,
+.lockOpenBtn,
+#toDoList li {
+    transition: transform 400ms ease-in-out, box-shadow 400ms ease-out;
+}
+
+.newAccountBtn:hover,
+.lockOpenBtn:hover,
+#toDoList li:hover {
+    transform: scale(1.002);
+    box-shadow: 5px 5px 14px #e6e6e6, -5px -5px 14px #ffffff;
+}

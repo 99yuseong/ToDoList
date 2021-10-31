@@ -1,0 +1,380 @@
+@import url(./font.css);
+@import url(./animation.css);
+@import url(./action.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #f5f6fa;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.mainContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul,
+li {
+    padding: none;
+    margin: none;
+    list-style: none;
+}
+
+button {
+    border: none;
+    background-color: inherit;
+}
+
+button:disabled {
+    color: inherit;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    z-index: -9999;
+    opacity: 0;
+}
+
+/* ------------------------ weather section style------------------------  */
+.Clear::before {
+    content: "\f185";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.Clouds::before {
+    content: "\f0c2";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.Rain::before {
+    content: "\f0e9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.Snow::before {
+    content: "\f2dc";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.Thunderstorm::before {
+    content: "\f0e7";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.weatherSection {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-weight: 900;
+}
+.weather span:first-child {
+    margin-left: 4px;
+}
+
+/* ------------------------ time section style------------------------  */
+
+.clickChangeBtn {
+    border-radius: 50px;
+    padding: 0 40px;
+    margin-bottom: 28px;
+    cursor: pointer;
+}
+
+.main {
+    height: 330px;
+}
+
+.mainTime {
+    display: flex;
+    width: 100%;
+    font-size: 220px;
+    line-height: 1.5;
+    font-weight: 900;
+}
+
+.mainTime strong {
+    font-weight: 900;
+}
+
+.mainTime span {
+    transform: translateY(-17px);
+    font-weight: 700;
+}
+
+.countDown {
+    padding: 20px 0;
+}
+
+.countDown h3 {
+    text-align: left;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.countDownTime {
+    font-size: 100px;
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+.progress {
+    width: 80%;
+    margin: 16px auto 0;
+}
+
+.progress h3 {
+    margin-bottom: 5px;
+    color: #57606f;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.percentBarBack {
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #dcdde1;
+}
+
+.percentBar {
+    display: block;
+    height: 18px;
+    background-color: #4cd137;
+}
+
+.percentText {
+    display: inline-block;
+    color: #57606f;
+    font-size: 12px;
+    font-weight: 400;
+    transform: translateX(-50%);
+}
+
+/* ------------------------ logIn Section style ------------------------  */
+
+.logInSection form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logInSection input {
+    display: block;
+    padding: 8px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    outline: none;
+}
+
+.logInSection input:focus {
+    border-color: #ff6b81;
+}
+.logInSection input:valid {
+    border-color: #2ed573;
+}
+
+.newAccountBtn {
+    display: flex;
+    margin: 16px auto 0;
+    padding: 12px 20px;
+    border-radius: 16px;
+}
+
+.newAccountBtn:after {
+    content: "\f055";
+    margin-left: 10px;
+    color: #57606f;
+    font-family: "Font Awesome 5 Free";
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.logInSection .InputUsernamePw input:first-child {
+    margin-bottom: 8px;
+}
+
+.logInSection .SignInForm button {
+    height: 74px;
+    margin-left: 8px;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: #ced6e0;
+}
+
+.lockOpenBtn {
+    width: 180px;
+    display: block;
+    border-radius: 16px;
+    margin: 16px auto;
+}
+
+.logInSection .SignInForm .cancelBtn {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    border-radius: 50%;
+    opacity: 0.5;
+    line-height: 18px;
+}
+
+.cancelBtn::after {
+    content: "\f057";
+    font-family: "Font Awesome 5 Free";
+    line-height: 18px;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.localUsername::after {
+    content: "\f023";
+    position: absolute;
+    top: 17px;
+    right: 23px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.localUsername {
+    position: relative;
+    align-items: center;
+    padding: 18px 20px;
+}
+
+.localUsername {
+    flex-grow: 2;
+}
+
+.logInSection .pwEnter button {
+    width: 72px;
+    height: 34px;
+    margin-left: 8px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #ced6e0;
+}
+
+.greeting {
+    height: 120px;
+    position: relative;
+    text-align: center;
+    font-size: 46px;
+    font-weight: 900;
+    color: inherit;
+    margin-top: 16px;
+}
+
+.greeting:hover .logOut {
+    display: block;
+}
+
+.logOut {
+    display: none;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 10px;
+    border-radius: 8px;
+    opacity: 0.5;
+    background-color: #ced6e0;
+    font-weight: 700;
+}
+
+/* ------------------------ to do list section style ------------------------  */
+
+#toDoForm input {
+    width: 400px;
+    display: block;
+    padding: 20px;
+    border: none;
+    border-radius: 16px;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+#toDoList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#toDoList li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 16px;
+    margin-top: 8px;
+}
+
+.checkBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+    z-index: -1;
+}
+
+.checkBtn::before {
+    content: "\f0c8";
+    font-family: "Font Awesome 5 Free";
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.checked.checkBtn::before {
+    content: "\f14a";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.toDoText {
+    padding: 16px 0 16px 48px;
+    flex-grow: 2;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 900;
+    color: inherit;
+    opacity: 0.8;
+}
+
+#toDoList .cancelBtn {
+    margin-right: 16px;
+}

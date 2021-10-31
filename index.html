@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./CSS/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+            crossorigin="anonymous"
+        />
+        <title>New Momentum</title>
+    </head>
+    <body>
+        <header>
+            <!-- weather -->
+            <div class="weatherSection">
+                <span aria-label="weather and temperature"></span>
+                <span aria-label="city that you are located"></span>
+            </div>
+        </header>
+
+        <section class="mainContainer">
+            <header>
+                <h1 class="sr-only">starts of new momentum</h1>
+                <!-- About time section -->
+                <div class="timeSection">
+                    <h2 class="sr-only">Change Clock or countdown by click!</h2>
+                    <button class="clickChangeBtn" type="button">
+                        <!-- clock -->
+                        <dl class="main">
+                            <dt class="sr-only">clock</dt>
+                            <dd class="mainTime">
+                                <strong class="clockHour">00</strong>
+                                <span>:</span>
+                                <strong class="clockMinute">00</strong>
+                            </dd>
+                        </dl>
+
+                        <!-- count down -->
+                        <dl class="countDown hidden">
+                            <dt>
+                                <h3>Until next semester</h3>
+                            </dt>
+                            <dd class="countDownTime">00:00</dd>
+                        </dl>
+                    </button>
+
+                    <!-- progress -->
+                    <dl class="progress hidden">
+                        <dt>
+                            <h3>Vacation progress</h3>
+                        </dt>
+                        <dd class="percentBarBack">
+                            <strong class="percentBar" aria-label="progress-bar"></strong>
+                        </dd>
+                        <dd class="percentText" aria-label="progress-percent"></dd>
+                    </dl>
+                </div>
+
+                <div class="logInSection">
+                    <h2 class="sr-only">click for login</h2>
+
+                    <!-- signIn -->
+                    <div class="signIn">
+                        <!-- new account button -->
+                        <button class="newAccountBtn" type="button">
+                            <h3>New Account</h3>
+                        </button>
+                        <!-- signIn form -->
+                        <form class="SignInForm hidden" action="#" method="get">
+                            <div class="InputUsernamePw">
+                                <input
+                                    type="text"
+                                    name="newUsername"
+                                    placeholder="username"
+                                    required
+                                    pattern=".*\S.*"
+                                />
+                                <input
+                                    type="text"
+                                    name="newPassword"
+                                    placeholder="password"
+                                    required
+                                    pattern=".*\S.*"
+                                />
+                            </div>
+                            <button type="submit">Sign in</button>
+                        </form>
+                    </div>
+
+                    <!-- logIn -->
+                    <div class="logIn hidden">
+                        <!-- lock-open button -->
+                        <button class="lockOpenBtn" type="button">
+                            <h3 class="localUsername"></h3>
+                        </button>
+                        <!-- input for password -->
+                        <form class="pwEnter hidden" action="#" method="get">
+                            <input type="text" name="password" placeholder="Password" required pattern=".*\S.*" />
+                            <button type="submit">Log in</button>
+                        </form>
+                    </div>
+
+                    <!-- greeting -->
+                    <div class="greeting hidden">
+                        <div>
+                            <strong class="greetingTime"></strong>
+                            <span class="greetingUsername"></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <article class="mainSection hidden">
+                <h1 class="sr-only"></h1>
+
+                <!-- todoList -->
+                <div class="toDoSection">
+                    <form id="toDoForm" action="#" method="get">
+                        <input type="text" required placeholder="Please write todos and press enter" />
+                    </form>
+                    <ul id="toDoList"></ul>
+                </div>
+
+                <!-- addtional something... -->
+            </article>
+        </section>
+
+        <script src="./JS/todolist.js"></script>
+        <script src="./JS/login.js"></script>
+        <script src="./JS/clock.js"></script>
+        <script src="./JS/weather.js"></script>
+        <script src="./JS/backgroundimg.js"></script>
+    </body>
+</html>
